@@ -1,3 +1,5 @@
+### String functions - https://www.postgresql.org/docs/9.1/functions-string.html
+
 1. Concatinating and making new email addresses. first letter of first name with lower case of last name and the domain name
 
 > SELECT LOWER(LEFT(first_name, 1)) || LOWER(last_name) || '@gmail.com' FROM customer
