@@ -68,6 +68,16 @@ LEFT JOIN cd.facilities
 ON cd.bookings.facid = cd.facilities.facid
 WHERE starttime >= '2012-09-21' AND starttime <= '2012-09-22' AND name ILIKE 'Tennis%'
 
+OR
+
+>SELECT cd.bookings.starttime AS start, cd.facilities.name 
+FROM cd.bookings 
+INNER JOIN cd.facilities 
+ON cd.bookings.facid = cd.facilities.facid 
+WHERE starttime >= '2012-09-21' AND starttime < '2012-09-22' 
+AND cd.facilities.facid IN (0,1)
+ORDER BY cd.bookings.starttime
+
 14. How can you produce a list of the start times for bookings by members named 'David Farrell'?
 
 > SELECT starttime, name FROM cd.bookings
