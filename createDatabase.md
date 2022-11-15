@@ -27,3 +27,30 @@ Creating a databse is quite simple, right click on the database directory, click
 >	job_id INTEGER REFERENCES job(job_id),
 >	hire_date TIMESTAMP 	
 >);
+
+
+## INSERTING INTO TABLE
+
+1. Inserting into job table
+
+> INSERT INTO job(job_name)
+> VALUES
+> ('Astronaut');
+
+> INSERT INTO job(job_name)
+> VALUES
+> ('President');
+
+2. Inserting into account table
+
+> INSERT INTO account(username,password, email, created_on)
+VALUES
+('Jose', 'password', 'Jose@gmail.com', CURRENT_TIMESTAMP);
+
+3. inserting into the account_job (intermediary table or the table containing foreign keys of account and job tables)
+
+> INSERT INTO account_job(user_id, job_id, hire_date)
+> VALUES
+> (10,10, CURRENT_TIMESTAMP)
+
+
