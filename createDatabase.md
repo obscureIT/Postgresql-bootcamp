@@ -11,6 +11,13 @@ Creating a databse is quite simple, right click on the database directory, click
 >	  last_login TIMESTAMP
 > );
 
+2. Create the job table - 
+
+> CREATE TABLE job(
+>	  job_id SERIAL PRIMARY KEY,
+>	  job_name VARCHAR(200) UNIQUE NOT NULL
+> );
+
 
 
 3. Create a table which references both the job table and the account table. This table will be an intermediary table which connects their job to their account. 
