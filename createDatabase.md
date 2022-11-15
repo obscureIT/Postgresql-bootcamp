@@ -86,3 +86,30 @@ VALUES
 WHERE job_name = 'Cowboy'
 RETURNING *
 
+### Alter clause
+##### Usued for adding, dropping, renaming columns, changing columns data type, set default values for a column, Add CHECK constraints, Rename Table.
+
+1. Renaming a table (changing the name of information table to new_info)
+
+> ALTER TABLE information
+RENAME TO new_info
+
+2. Rename column name of a table
+
+> ALTER TABLE new_info
+RENAME COLUMN person TO people
+
+3. Dropping a constraint on some column
+
+> ALTER TABLE new_info
+ALTER COLUMN people DROP NOT NULL
+
+4. Dropping columns
+
+> ALTER TABLE new_info
+DROP COLUMN people
+
+or
+
+> ALTER TABLE new_info
+DROP COLUMN IF EXISTS people
