@@ -74,3 +74,15 @@ VALUES
 > FROM account
 > WHERE account_job.user_id = account.user_id
 
+## DELETE rows
+
+1. first adding a value to the job table and then removing it 
+
+>INSERT INTO job(job_name)
+VALUES
+('Cowboy')
+
+>DELETE FROM job
+WHERE job_name = 'Cowboy'
+RETURNING *
+
