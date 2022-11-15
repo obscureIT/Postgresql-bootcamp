@@ -53,4 +53,24 @@ VALUES
 > VALUES
 > (10,10, CURRENT_TIMESTAMP)
 
+## UPDATING TABLE
+
+1.
+
+> UPDATE account
+> SET last_login = CURRENT_TIMESTAMP
+> RETURNING created_on, last_login
+
+2.
+
+> UPDATE account
+> SET last_login = created_on
+> RETURNING *
+
+3. UPDATE JOIN 
+
+> SELECT * FROM account_job
+> SET hire_date = account.created_on
+> FROM account
+> WHERE account_job.user_id = account.user_id
 
