@@ -64,7 +64,7 @@ VALUES
 VALUES
 ('Jonas','Salk',1,5,'Biology','jsalk@school.org','777-555-4321')
 
-####Extras
+#### Extras
 
 One of the mistakes i Have mde while creating tahe tables is using NOT NULL on email in both of the tables. to alter that I used -
 
